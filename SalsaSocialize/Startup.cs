@@ -55,6 +55,7 @@ namespace SalsaSocialize
                 Newtonsoft.Json.ReferenceLoopHandling.Ignore;
             });
             services.AddAutoMapper(typeof(DatingRepository).Assembly);
+            services.Configure<CloudinarySettings>(Configuration.GetSection("CloudinarySettings"));
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
